@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\DZA.Core\DZA.Core.csproj" />
+    <ProjectReference Include="..\DZA.Cadastro.Domain\DZA.Cadastro.Domain.csproj" />
+    <ProjectReference Include="..\DZA.Cadastro.Infrastructure.Data\DZA.Cadastro.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
 </Project>
