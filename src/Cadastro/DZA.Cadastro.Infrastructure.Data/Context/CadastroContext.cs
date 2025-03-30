@@ -11,6 +11,6 @@ public class CadastroContext : DbContext
     public CadastroContext(DbContextOptions options) : base(options)
     { }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder) 
-        => modelBuilder.ApplyConfigurationsFromAssembly(typeof(CadastroContext).Assembly)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        => modelBuilder.ApplyConfigurationsFromAssembly(typeof(CadastroContext).Assembly);
 }
