@@ -22,7 +22,7 @@ public class DepartamentoService : IDepartamentoService
         if(departEntity is not null)
         {
             _unitOfWork.Pessoa.AdicionarDepartamento(departEntity);
-            await _unitOfWork.Commit();
+            _unitOfWork.Commit();
         }
     }
 
@@ -32,7 +32,7 @@ public class DepartamentoService : IDepartamentoService
         if(departEntity is not null)
         {
             _unitOfWork.Pessoa.AtualizarDepartamento(departEntity);
-            await _unitOfWork.Commit();
+            _unitOfWork.Commit();
         }
     }
 

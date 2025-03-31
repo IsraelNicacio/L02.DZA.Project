@@ -22,7 +22,7 @@ public class PessoaService : IPessoaService
         if(pessoaEntity is not null)
         {
             _unitOfWork.Pessoa.AdicionarPessoa(pessoaEntity);
-            await _unitOfWork.Commit();
+            _unitOfWork.Commit();
         }
     }
 
@@ -32,7 +32,7 @@ public class PessoaService : IPessoaService
         if(pessoaEntity is not null)
         {
             _unitOfWork.Pessoa.AtualizarPessoa(pessoaEntity);
-            await _unitOfWork.Commit();
+            _unitOfWork.Commit();
         }
     }
 

@@ -3,5 +3,5 @@
 public interface IUnitOfWork : IDisposable
 {
     IPessoaRepository Pessoa { get; }
-    Task<bool> Commit();
+    bool Commit();
 }

@@ -14,9 +14,9 @@ public class UnitOfWork : IUnitOfWork
     public IPessoaRepository Pessoa 
         => _pessoa ?? (_pessoa = new PessoaRepository(_cadastroContext));
 
-    public async Task<bool> Commit() 
-        => await _cadastroContext.SaveChangesAsync() > 0;
+    public bool Commit() 
+        => _cadastroContext.SaveChanges() > 0;
 
     public void Dispose() 
-        => _cadastroContext.DisposeAsync();
+        => _cadastroContext.Dispose();
 }

@@ -10,6 +10,8 @@ namespace DZA.Cadastro.Api.Controllers
     {
         private readonly IPessoaService _pessoa;
 
+        public PessoaController(IPessoaService pessoa) => _pessoa = pessoa;
+
         [HttpGet(Name = "ObterPessoas")]
         public async Task<IEnumerable<PessoaDTO>> GetPessoas()
             => await _pessoa.ObterPessoas();
