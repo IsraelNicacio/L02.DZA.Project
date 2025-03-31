@@ -4,7 +4,7 @@ namespace DZA.Cadastro.Domain.Entities;
 
 public class Pessoa : EntityCore, IAggregateRoot
 {
-    public Guid DepartamentoId { get; private set; }
+    public Guid? DepartamentoId { get; private set; }
     public string Nome { get; private set; }
     public string SobreNome { get; private set; }
     public int Idade { get; set; }
