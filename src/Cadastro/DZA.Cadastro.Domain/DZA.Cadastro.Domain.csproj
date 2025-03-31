@@ -11,4 +11,8 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\DZA.Core\DZA.Core.csproj" />
+  </ItemGroup>
+
 </Project>
