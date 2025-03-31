@@ -12,7 +12,7 @@ public static class Dependences
         services.AddAutoMapper(typeof(DomainDTOMappingProfile));
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
-        services.AddScoped<IPessoaRepository, PessoaRepository>();
+        //services.AddScoped<IPessoaRepository, PessoaRepository>();
         services.AddScoped<IPessoaService, PessoaService>();
         services.AddScoped<IDepartamentoService, DepartamentoService>();
     }

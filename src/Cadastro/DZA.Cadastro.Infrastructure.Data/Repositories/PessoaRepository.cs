@@ -45,6 +45,4 @@ public class PessoaRepository : IPessoaRepository
 
     public void AtualizarDepartamento(Departamento departamento) 
         => _cadastroContext.Update(departamento);
-
-    public void Dispose() => GC.SuppressFinalize(this);
 }
