@@ -1,12 +1,11 @@
 services:
-    api-demo:
-        image: L02_DZA_API:latest
-        container_name: L02_DZA_API
+    l01_dza_api:
+        container_name: l01_dza_api
         build:
-            context: .
+            context: ./src
             dockerfile: Dockerfile
         environment:
             ASPNETCORE_ENVIRONMENT: Development
         restart: always
         ports:
-            - "8080:8080"
+            - "8082:8080"
