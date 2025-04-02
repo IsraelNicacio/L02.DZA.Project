@@ -2,7 +2,7 @@
 
 # This stage is used when running from VS in fast mode (Default for Debug configuration)
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER $APP_UID
+USER app
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
@@ -13,6 +13,10 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["src/Cadastro/DZA.Cadastro.Api/DZA.Cadastro.Api.csproj", "src/Cadastro/DZA.Cadastro.Api/"]
+COPY ["src/Cadastro/DZA.Cadastro.Application/DZA.Cadastro.Application.csproj", "src/Cadastro/DZA.Cadastro.Application/"]
+COPY ["src/Core/DZA.Core/DZA.Core.csproj", "src/Core/DZA.Core/"]
+COPY ["src/Cadastro/DZA.Cadastro.Domain/DZA.Cadastro.Domain.csproj", "src/Cadastro/DZA.Cadastro.Domain/"]
+COPY ["src/Cadastro/DZA.Cadastro.Infrastructure.Data/DZA.Cadastro.Infrastructure.Data.csproj", "src/Cadastro/DZA.Cadastro.Infrastructure.Data/"]
 RUN dotnet restore "./src/Cadastro/DZA.Cadastro.Api/DZA.Cadastro.Api.csproj"
 COPY . .
 WORKDIR "/src/src/Cadastro/DZA.Cadastro.Api"
