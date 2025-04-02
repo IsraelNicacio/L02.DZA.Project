@@ -1,12 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{466159A4-3831-4D45-ABE9-70B5B2B55E60}"
 	ProjectSection(SolutionItems) = preProject
 		.dockerignore = .dockerignore
 		.gitignore = .gitignore
+		src\Dockerfile = src\Dockerfile
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -14,17 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cadastro", "Cadastro", "{B8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1ABD8D9E-9689-478C-9258-85CD366EDB1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZA.Cadastro.Domain", "src\Cadastro\DZA.Cadastro.Domain\DZA.Cadastro.Domain.csproj", "{D8674951-CA8D-4C64-863D-E33DCA5F4716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZA.Cadastro.Domain", "src\Cadastro\DZA.Cadastro.Domain\DZA.Cadastro.Domain.csproj", "{D8674951-CA8D-4C64-863D-E33DCA5F4716}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZA.Core", "src\Core\DZA.Core\DZA.Core.csproj", "{BD618EF9-C940-42FF-939B-9633C364C28E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZA.Core", "src\Core\DZA.Core\DZA.Core.csproj", "{BD618EF9-C940-42FF-939B-9633C364C28E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{B8DAD7E6-EE6F-4A15-85E5-2060ADE3549F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZA.Cadastro.Infrastructure.Data", "src\Cadastro\DZA.Cadastro.Infrastructure.Data\DZA.Cadastro.Infrastructure.Data.csproj", "{DFAD17A1-42B3-4BBD-A373-694BD803A804}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZA.Cadastro.Infrastructure.Data", "src\Cadastro\DZA.Cadastro.Infrastructure.Data\DZA.Cadastro.Infrastructure.Data.csproj", "{DFAD17A1-42B3-4BBD-A373-694BD803A804}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZA.Cadastro.Application", "src\Cadastro\DZA.Cadastro.Application\DZA.Cadastro.Application.csproj", "{49108638-0071-481B-BC12-F2F16241FAE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZA.Cadastro.Application", "src\Cadastro\DZA.Cadastro.Application\DZA.Cadastro.Application.csproj", "{49108638-0071-481B-BC12-F2F16241FAE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZA.Cadastro.Api", "src\Cadastro\DZA.Cadastro.Api\DZA.Cadastro.Api.csproj", "{FFD8867C-8972-4D63-8004-FAC644563E9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZA.Cadastro.Api", "src\Cadastro\DZA.Cadastro.Api\DZA.Cadastro.Api.csproj", "{FFD8867C-8972-4D63-8004-FAC644563E9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,5 +66,8 @@ Global
 		{DFAD17A1-42B3-4BBD-A373-694BD803A804} = {B8F6F100-B8D2-4DC9-B603-DF220165A2C3}
 		{49108638-0071-481B-BC12-F2F16241FAE5} = {B8F6F100-B8D2-4DC9-B603-DF220165A2C3}
 		{FFD8867C-8972-4D63-8004-FAC644563E9B} = {B8F6F100-B8D2-4DC9-B603-DF220165A2C3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A159720-F65D-4309-A9A1-719A04F97332}
 	EndGlobalSection
 EndGlobal
