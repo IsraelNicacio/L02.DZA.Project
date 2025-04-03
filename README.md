@@ -1,16 +1,9 @@
-
-# Logo 1
-
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
-
-# Logo 2
-
 <div align="center">
   <img height="200" src="./Assets/Logo_IDN_DEV_Sem_Fundo.png"  />
 </div>
 
 
-# Projeto Rest Api
+# Projeto de teste Rest Api
 
 Projeto de teste feito em DDD para efetuar Deploy em Docker
 
@@ -87,7 +80,8 @@ Se voce usa window considere instalar o WSL
 [Como instalar o WSL](https://learn.microsoft.com/pt-br/windows/wsl/install)
 
 Instale o Docker para conseguir fazer o deploy
-[Instalar o Docker Desktop](https://docs-docker-com.translate.goog/desktop/setup/install/windows-install/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc)
+
+[Como instalar o Docker Desktop](https://docs-docker-com.translate.goog/desktop/setup/install/windows-install/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc)
 
 Após instalado e conficurado corretamente
 Execute o docker-compose na raiz do projeto
@@ -95,6 +89,7 @@ Execute o docker-compose na raiz do projeto
 ## Melhorias
 
 O CORS nesse projeto não fuinciona corretamente.
+
 Estou procurando uma solução para permitir a comunicação do endpoint.
 
 ### Etiquetas
