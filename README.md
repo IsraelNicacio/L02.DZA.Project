@@ -1,54 +1,114 @@
 
+# Logo 1
+
 ![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
+# Logo 2
 
-# TÌtulo do Projeto
+<div align="center">
+  <img height="200" src="./Assets/Logo_IDN_DEV_Sem_Fundo.png"  />
+</div>
 
-Uma breve descriÁ„o sobre o que esse projeto faz e para quem ele È
+
+# Projeto Rest Api
+
+Projeto de teste feito em DDD para efetuar Deploy em Docker
 
 
-## DocumentaÁ„o da API
+## Documenta√ß√£o da API
 
-#### Retorna todos os itens
+#### Retorna lista de pessoas
 
 ```http
-  GET /api/items
+  GET tenant/Pessoa/ObterPessoas
 ```
 
-| Par‚metro   | Tipo       | ObrigatÛrio |DescriÁ„o                           |
+| Par√¢metro   | Tipo       | Obrigat√≥rio |Descri√ß√£o                           |
 | :---------- | :--------- | :---------  |:---------------------------------- |
-| `Id` | `Guid` | **Sim** | O ID da Pessoa que vocÍ quer |
+| `tenant` | `string` | **Sim** | O tenant representa o nome da base de dados |
 
 #### Retorna uma Pessoa
 
 ```http
-  GET /api/items/${id}
+  GET tenant/Pessoa/ObterPessoa/{Id}
 ```
 
-| Par‚metro   | Tipo       | ObrigatÛrio |DescriÁ„o                           |
-| :---------- | :--------- | :---------  |:---------------------------------- |
-| `id`      | `string` | **Sim** | O ID do Departamento que vocÍ quer |
+| Par√¢metro   | Tipo       | Obrigat√≥rio |Descri√ß√£o                          |
+| :---------- | :--------- | :---------  |:----------------------------------|
+| `id`      | `Guid` | **Sim** | O ID da Pessoa que voc√™ quer                |
+| `tenant` | `string` | **Sim** | O tenant representa o nome da base de dados|
 
-#### Retorna um Departamento
+#### Retorna uma lista de pessoas usando o Id do Departamento
 
-Recebe dois n˙meros e retorna a sua soma.
+```http
+GET tenant/Pessoa/ObterPessoasPorDepartamento/{Id}
+```
+
+| Par√¢metro   | Tipo       | Obrigat√≥rio |Descri√ß√£o                          |
+| :---------- | :--------- | :---------  |:----------------------------------|
+| `id`      | `Guid` | **Sim** | O ID do Departamento que voc√™ quer          |
+| `tenant` | `string` | **Sim** | O tenant representa o nome da base de dados|
+
+#### Adiciona uma nova pessoa
+
+```http
+POST tenant/Pessoa/AdicionarPessoa
+```
+
+| Par√¢metro   | Tipo       | Obrigat√≥rio |Descri√ß√£o                          |
+| :---------- | :--------- | :---------  |:----------------------------------|
+| `tenant` | `string` | **Sim** | O tenant representa o nome da base de dados|
+
+#### Exemplo Request body
+
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "departamentoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "nome": "string",
+  "sobreNome": "string",
+  "idade": 120
+}
+```
+
+| Campo   | Tipo       | Obrigat√≥rio |Descri√ß√£o                          |
+| :---------- | :--------- | :---------  |:----------------------------------|
+| `id`      | `Guid` | **Sim** | O ID do Departamento que voc√™ quer          |
+| `departamentoId` | `Guid` | **Sim** | O ID do Departamento que voc√™ quer          |
+| `nome`      |	`string`   |	**Sim**    |	Primeiro Nome da pessoa|
+| `sobreNome` |	`string`   |	**Sim**    |	SobreNome da pessoa|
+| `Idade`     |	`integer`   |	**Sim**    |	Idade da pessoa|
 
 
-## ApÍndice
+### Apendice
 
-Coloque qualquer informaÁ„o adicional aqui
+Se voce usa window considere instalar o WSL
 
+[Como instalar o WSL](https://learn.microsoft.com/pt-br/windows/wsl/install)
 
-## Stack utilizada
+Instale o Docker para conseguir fazer o deploy
+[Instalar o Docker Desktop](https://docs-docker-com.translate.goog/desktop/setup/install/windows-install/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc)
 
-**Back-end:** C#, .Net-8
+Ap√≥s instalado e conficurado corretamente
+Execute o docker-compose na raiz do projeto
 
+## Melhorias
 
-## Etiquetas
+O CORS nesse projeto n√£o fuinciona corretamente.
+Estou procurando uma solu√ß√£o para permitir a comunica√ß√£o do endpoint.
 
-Adicione etiquetas de algum lugar, como: [shields.io](https://shields.io/)
+### Etiquetas
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
+### Stacks utilizadas
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="docker logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="csharp logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" height="40" alt="dotnetcore logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" height="40" alt="microsoftsqlserver logo"  />
+</div>
