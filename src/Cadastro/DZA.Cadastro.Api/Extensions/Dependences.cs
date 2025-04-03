@@ -9,6 +9,8 @@ public static class Dependences
 {
     public static void AddDependences(this IServiceCollection services)
     {
+        services.AddCorsServices();
+
         services.AddAutoMapper(typeof(DomainDTOMappingProfile));
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();

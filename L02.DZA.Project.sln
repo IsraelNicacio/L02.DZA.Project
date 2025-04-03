@@ -29,8 +29,15 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZA.Cadastro.Api", "src\Cadastro\DZA.Cadastro.Api\DZA.Cadastro.Api.csproj", "{FFD8867C-8972-4D63-8004-FAC644563E9B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{D450F01A-EB7D-49C1-9C65-EACC9BCEA3D5}"
+	ProjectSection(SolutionItems) = preProject
+		src\DataBase\Dockerfile = src\DataBase\Dockerfile
+		src\DataBase\entrypoint.sh = src\DataBase\entrypoint.sh
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{257B23DF-3646-4042-93F1-98C5D66BAF94}"
+	ProjectSection(SolutionItems) = preProject
+		src\DataBase\SQL\Inicializacao_DataBase.sql = src\DataBase\SQL\Inicializacao_DataBase.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

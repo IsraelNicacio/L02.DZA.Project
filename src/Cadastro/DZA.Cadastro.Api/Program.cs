@@ -23,6 +23,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.ApplyCorsConfig();
+
 app.UseAuthorization();
 
 app.MapControllers();
