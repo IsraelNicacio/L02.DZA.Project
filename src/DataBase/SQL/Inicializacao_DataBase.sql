@@ -1,4 +1,10 @@
-﻿IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+﻿CREATE DATABASE Tenant02;
+GO
+
+USE Tenant02;
+GO
+
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
 BEGIN
     CREATE TABLE [__EFMigrationsHistory] (
         [MigrationId] nvarchar(150) NOT NULL,
@@ -32,4 +38,3 @@ VALUES (N'20250331120237_Inicializacao_DataBase', N'9.0.3');
 
 COMMIT;
 GO
-

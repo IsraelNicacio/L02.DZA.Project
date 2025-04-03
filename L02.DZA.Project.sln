@@ -28,6 +28,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZA.Cadastro.Application", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZA.Cadastro.Api", "src\Cadastro\DZA.Cadastro.Api\DZA.Cadastro.Api.csproj", "{FFD8867C-8972-4D63-8004-FAC644563E9B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{D450F01A-EB7D-49C1-9C65-EACC9BCEA3D5}"
+	ProjectSection(SolutionItems) = preProject
+		src\DataBase\Dockerfile = src\DataBase\Dockerfile
+		src\DataBase\entrypoint.sh = src\DataBase\entrypoint.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{257B23DF-3646-4042-93F1-98C5D66BAF94}"
+	ProjectSection(SolutionItems) = preProject
+		src\DataBase\SQL\Inicializacao_DataBase.sql = src\DataBase\SQL\Inicializacao_DataBase.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +78,8 @@ Global
 		{DFAD17A1-42B3-4BBD-A373-694BD803A804} = {B8F6F100-B8D2-4DC9-B603-DF220165A2C3}
 		{49108638-0071-481B-BC12-F2F16241FAE5} = {B8F6F100-B8D2-4DC9-B603-DF220165A2C3}
 		{FFD8867C-8972-4D63-8004-FAC644563E9B} = {B8F6F100-B8D2-4DC9-B603-DF220165A2C3}
+		{D450F01A-EB7D-49C1-9C65-EACC9BCEA3D5} = {466159A4-3831-4D45-ABE9-70B5B2B55E60}
+		{257B23DF-3646-4042-93F1-98C5D66BAF94} = {D450F01A-EB7D-49C1-9C65-EACC9BCEA3D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A159720-F65D-4309-A9A1-719A04F97332}

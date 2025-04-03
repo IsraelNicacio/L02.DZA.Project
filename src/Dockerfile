@@ -2,9 +2,9 @@
 
 # This stage is used when running from VS in fast mode (Default for Debug configuration)
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
 WORKDIR /app
-EXPOSE 8080
+EXPOSE 80
+#EXPOSE 443
 
 
 # This stage is used to build the service project
@@ -28,7 +28,8 @@ RUN dotnet publish "./DZA.Cadastro.Api.csproj" -c $BUILD_CONFIGURATION -o /app/p
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
-ENV ASPNETCORE_URLS="http://+:8080"
-ENV ASPNETCORE_ENVIRONMENT="Development"
+#ENV USE_HTTPS_REDIRECTION="false"
+#ENV ASPNETCORE_URLS="http://+:80"
+#ENV ASPNETCORE_ENVIRONMENT="Stage"
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "DZA.Cadastro.Api.dll"]

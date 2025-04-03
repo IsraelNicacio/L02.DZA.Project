@@ -5,9 +5,9 @@ using DZA.Cadastro.Infrastructure.Data.Repositories;
 
 namespace DZA.Cadastro.Api.Extensions;
 
-public static class Dependences
+public static class DependencyInjectionConfig
 {
-    public static void AddDependences(this IServiceCollection services)
+    public static void RegisterServices(this IServiceCollection services)
     {
         services.AddAutoMapper(typeof(DomainDTOMappingProfile));
 
