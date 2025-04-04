@@ -28,8 +28,8 @@ RUN dotnet publish "./DZA.Cadastro.Api.csproj" -c $BUILD_CONFIGURATION -o /app/p
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
-#ENV USE_HTTPS_REDIRECTION="false"
-#ENV ASPNETCORE_URLS="http://+:80"
-#ENV ASPNETCORE_ENVIRONMENT="Stage"
+ENV USE_HTTPS_REDIRECTION="false"
+ENV ASPNETCORE_URLS="http://+:80"
+ENV ASPNETCORE_ENVIRONMENT="Stage"
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "DZA.Cadastro.Api.dll"]

@@ -11,7 +11,7 @@ public static class ApiConfig
             {
                 options.AddPolicy(AllowAllPolicy,
                     builder => builder
-                    .AllowAnyOrigin()
+                    .WithOrigins("http://localhost:8082/Swagger/index.html", "http://localhost:8082")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     );

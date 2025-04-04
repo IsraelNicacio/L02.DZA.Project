@@ -1,4 +1,19 @@
 services:
+
+    data_base_l02_dza:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        container_name: data_base_l02_dza
+        expose:
+            - 1433
+        ports:
+            - "1433:1433"
+        environment:
+            SA_PASSWORD: "#sa123456"
+            ACCEPT_EULA: "Y" 
+            MSSQL_PID: "Express"
+        networks:
+            - l02-dza-network
+
     l02_dza_api:
         container_name: l02_dza_api
         build:
@@ -18,19 +33,6 @@ services:
             - l02-dza-network
         depends_on:
             - data_base_l02_dza
-
-    data_base_l02_dza:
-        container_name: data_base_l02_dza
-        build: 
-            context: ./src/DataBase
-            dockerfile: Dockerfile
-        ports:
-            - "1433:1433"
-        environment:
-            SA_PASSWORD: "#sa123456"
-            ACCEPT_EULA: "Y"
-        networks:
-            - l02-dza-network
         
 networks:
     l02-dza-network:
