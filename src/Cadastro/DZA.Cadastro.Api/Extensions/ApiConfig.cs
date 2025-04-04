@@ -23,7 +23,7 @@ public static class ApiConfig
         if (env.IsDevelopment() || env.IsEnvironment("Stage") || env.IsEnvironment("Docker"))
             app.UseDeveloperExceptionPage();
 
-        if (app.Configuration["USE_HTTOPS_REDIRECTION"] == "true")
+        if (app.Configuration["USE_HTTPS_REDIRECTION"] == "true")
             app.UseHttpsRedirection();
 
         app.UseRouting();
